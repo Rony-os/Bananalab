@@ -1,0 +1,22 @@
+@use './variaveis' as *;
+
+@mixin espacamento-padrao($direcao: all) {
+  @if $direcao == all {
+    margin: $espacamento-padrao;
+    padding: $espacamento-padrao;
+  } @else if $direcao == vertical {
+    margin-top: $espacamento-padrao;
+    margin-bottom: $espacamento-padrao;
+  } @else if $direcao == horizontal {
+    margin-left: $espacamento-padrao;
+    margin-right: $espacamento-padrao;
+  }
+}
+
+@mixin botao-basico {
+  padding: 0.8rem;
+  background-color: $amarelo;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
